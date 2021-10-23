@@ -1,0 +1,22 @@
+.books-hero {
+  padding-top: 47px;
+  padding-bottom: 47px;
+}
+
+.books-hero__list {
+  @include list-unstyled; 
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-right: -12px;
+  margin-bottom: -16px;
+}
+
+.books-hero__index-list {
+  @extend .books-hero__list;
+}
+
+.books-hero__item {
+  margin-right: 12px;
+  margin-bottom: 16px;
+}

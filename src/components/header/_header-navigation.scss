@@ -1,0 +1,140 @@
+@import './../../assets/scss/fonts';
+@import './../../assets/scss/mixins';
+@import './../../assets/scss/variables';
+
+.header-navigation {
+  position: relative;
+  z-index: 2;
+  background-color: $color-secondary;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.header-navigation__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-navigation__logo-link {
+  flex-shrink: 0;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.header-navigation__logo {
+  display: block;
+}
+
+.header-navigation__links-toggle {
+  display: none;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  background-image: url(../../assets/img/icon/menu-btn-close.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.header-navigation__links-toggle--open {
+  background-image: url(../../assets/img/icon/menu-btn-open.svg);
+}
+
+.header-navigation__links {
+  display: flex;
+  align-items: center;
+}
+
+.header-navigation__links-search {
+  width: 22px;
+  height: 22px;
+  margin-left: 122px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  background-image: url(../../assets/img/icon/search-icon.svg);
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+@include breakpoint-down(700px) {
+
+  .header-navigation__links-search {
+    margin-left: 60px;
+  }
+
+}
+
+@include breakpoint-down(550px) {
+
+  .header-navigation__links-search {
+    margin-left: 20px;
+  }
+
+  .header-navigation__logo {
+    width: 80px;
+  }
+
+}
+
+@include breakpoint-down(445px) {
+
+  .header-navigation__links-search {
+    margin-left: 10px;
+  }
+
+  .header-navigation__logo {
+    width: 80px;
+  }
+
+}
+
+  @include breakpoint-down(440px) {
+
+  .header-navigation {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .header-navigation__nav {
+    display: none;
+  }
+
+  .header-navigation__nav--active {
+    display: block;
+  }
+
+  .header-navigation__links-search {
+    margin-left: 0;
+    margin-right: 30px;
+  }
+
+  .header-navigation__links-toggle {
+    display: block;
+  }
+
+}
