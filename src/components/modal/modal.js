@@ -1,8 +1,9 @@
-function Modal ({nameClass='search-modal'},props) {
+function Modal ({nameClass='search-modal', fn}) {
+  console.log(typeof(fn));
   const onFilterFormSubmit = (evt) => {
     evt.preventDefault()
 
-    props.fn()
+    fn()
 
   }
 
